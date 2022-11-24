@@ -1,4 +1,4 @@
 repository "FPS Game@itsAlaska@cloud"
   path "/"
-    br "/main"
-    co "/main"
+    smartbranch "/main/sandbox" 
+     
