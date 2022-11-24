@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 20
-  productGUID: 2705509fb92b47b4b8b3c21f3aa5d9a7
+  productGUID: 878e9a5a763acc54f80947e9ce6854c7
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -702,7 +702,7 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 7453f5ba-4237-433c-9cfc-540de533388d
   framebufferDepthMemorylessMode: 0
   projectName: 
   organizationId: 
