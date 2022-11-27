@@ -8314,6 +8314,16 @@ PrefabInstance:
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 919155138}
+    - target: {fileID: 7480972765152746616, guid: b5e12f910536fde4ca397c8a982f611a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8017639665147224791, guid: b5e12f910536fde4ca397c8a982f611a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8196185063161778109, guid: b5e12f910536fde4ca397c8a982f611a,
         type: 3}
       propertyPath: movementSettings.JumpForce
@@ -8353,7 +8363,7 @@ PrefabInstance:
     - target: {fileID: 8196185063171630715, guid: b5e12f910536fde4ca397c8a982f611a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.35
+      value: -0.29
       objectReference: {fileID: 0}
     - target: {fileID: 8196185063171630715, guid: b5e12f910536fde4ca397c8a982f611a,
         type: 3}
