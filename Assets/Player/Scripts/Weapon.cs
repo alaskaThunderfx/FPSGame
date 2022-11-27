@@ -24,6 +24,9 @@ public class Weapon : MonoBehaviour
     Ammo ammoSlot;
 
     [SerializeField]
+    AmmoType ammoType;
+
+    [SerializeField]
     float timeBetweenShots = .5f;
 
     bool canShoot = true;
@@ -33,26 +36,26 @@ public class Weapon : MonoBehaviour
         canShoot = true;
     }
 
-    // void Update()
-    // {
-    //     if (Input.GetMouseButtonDown(0) && canShoot)
-    //     {
-    //         StartCoroutine(Shoot());
-    //     }
-    // }
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && canShoot)
+        {
+            StartCoroutine(Shoot());
+        }
+    }
 
-    // IEnumerator Shoot()
-    // {
-    //     canShoot = false;
-    //     if (ammoSlot.CurrentAmmo > 0)
-    //     {
-    //         ammoSlot.CurrentAmmo -= 1;
-    //         PlayMuzzleFlash();
-    //         ProcessRaycast();
-    //     }
-    //     yield return new WaitForSeconds(timeBetweenShots);
-    //     canShoot = true;
-    // }
+    IEnumerator Shoot()
+    {
+        canShoot = false;
+        if (ammoSlot.GetCurrentAmmo(ammoType) > 0)
+        {
+            ammoSlot.ReduceCurrentAmmo(ammoType);
+            PlayMuzzleFlash();
+            ProcessRaycast();
+        }
+        yield return new WaitForSeconds(timeBetweenShots);
+        canShoot = true;
+    }
 
     void PlayMuzzleFlash()
     {

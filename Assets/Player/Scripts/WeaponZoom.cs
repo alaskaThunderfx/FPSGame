@@ -23,6 +23,11 @@ public class WeaponZoom : MonoBehaviour
 
     void Start()
     {
+        SetZoomOutValues();
+    }
+
+    void SetZoomOutValues()
+    {
         originalZoom = mainCamera.fieldOfView;
         originalXSensitivity = mainController.mouseLook.XSensitivity;
         originalYSensitivity = mainController.mouseLook.YSensitivity;
@@ -33,19 +38,34 @@ public class WeaponZoom : MonoBehaviour
         Zoom();
     }
 
-    public void Zoom()
+    void Zoom()
     {
         if (Input.GetMouseButton(1))
         {
-            mainCamera.fieldOfView = amountToZoom;
-            mainController.mouseLook.XSensitivity = zoomInSensitivity;
-            mainController.mouseLook.YSensitivity = zoomInSensitivity;
+            ZoomIn();
         }
         else
         {
-            mainCamera.fieldOfView = originalZoom;
-            mainController.mouseLook.XSensitivity = originalXSensitivity;
-            mainController.mouseLook.YSensitivity = originalYSensitivity;
+            ZoomOut();
         }
+    }
+
+    void ZoomIn()
+    {
+        mainCamera.fieldOfView = amountToZoom;
+        mainController.mouseLook.XSensitivity = zoomInSensitivity;
+        mainController.mouseLook.YSensitivity = zoomInSensitivity;
+    }
+
+    void ZoomOut()
+    {
+        mainCamera.fieldOfView = originalZoom;
+        mainController.mouseLook.XSensitivity = originalXSensitivity;
+        mainController.mouseLook.YSensitivity = originalYSensitivity;
+    }
+
+    void OnDisable()
+    {
+        ZoomOut();
     }
 }

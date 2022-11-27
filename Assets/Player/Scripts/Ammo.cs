@@ -11,12 +11,28 @@ public class Ammo : MonoBehaviour
     private class AmmoSlot
     {
         public AmmoType ammoType;
-        public int ammoAmount;
+        public int currentAmmo;
     }
 
-    // public int CurrentAmmo
-    // {
-        // set { currentAmmo = value; }
-        // get { return currentAmmo; }
-    // }
+    public int GetCurrentAmmo(AmmoType ammoType)
+    {
+        return GetAmmoSlot(ammoType).currentAmmo;
+    }
+
+    public void ReduceCurrentAmmo(AmmoType ammoType)
+    {
+        GetAmmoSlot(ammoType).currentAmmo--;
+    }
+
+    AmmoSlot GetAmmoSlot(AmmoType ammoType)
+    {
+        foreach (AmmoSlot slot in ammoSlots)
+        {
+            if (slot.ammoType == ammoType)
+            {
+                return slot;
+            }
+        }
+        return null;
+    }
 }

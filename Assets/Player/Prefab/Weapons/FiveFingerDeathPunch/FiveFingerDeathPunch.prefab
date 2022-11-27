@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4002389528615560372}
   - component: {fileID: 4585888669407751012}
   m_Layer: 0
-  m_Name: Fireball
+  m_Name: FiveFingerDeathPunch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,13 +140,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FPCamera: {fileID: 0}
-  range: 30
+  range: 5
   damage: 100
   muzzleFlash: {fileID: 7872452104723059449}
   hitEffect: {fileID: 7430019797677829888, guid: 1842502099a3af649ae0c1342dcce0db,
     type: 3}
   ammoSlot: {fileID: 0}
-  timeBetweenShots: 0.5
+  ammoType: 2
+  timeBetweenShots: 5
 --- !u!1 &1519457667544977549
 GameObject:
   m_ObjectHideFlags: 0

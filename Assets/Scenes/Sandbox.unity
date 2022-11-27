@@ -8324,6 +8324,36 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8129664406538790716, guid: b5e12f910536fde4ca397c8a982f611a,
+        type: 3}
+      propertyPath: ammoSlots.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129664406538790716, guid: b5e12f910536fde4ca397c8a982f611a,
+        type: 3}
+      propertyPath: ammoSlots.Array.data[1].ammoType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129664406538790716, guid: b5e12f910536fde4ca397c8a982f611a,
+        type: 3}
+      propertyPath: ammoSlots.Array.data[2].ammoType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129664406538790716, guid: b5e12f910536fde4ca397c8a982f611a,
+        type: 3}
+      propertyPath: ammoSlots.Array.data[0].ammoAmount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129664406538790716, guid: b5e12f910536fde4ca397c8a982f611a,
+        type: 3}
+      propertyPath: ammoSlots.Array.data[1].ammoAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129664406538790716, guid: b5e12f910536fde4ca397c8a982f611a,
+        type: 3}
+      propertyPath: ammoSlots.Array.data[2].ammoAmount
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8196185063161778109, guid: b5e12f910536fde4ca397c8a982f611a,
         type: 3}
       propertyPath: movementSettings.JumpForce

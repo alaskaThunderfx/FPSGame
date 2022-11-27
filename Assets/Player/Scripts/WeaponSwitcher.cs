@@ -55,7 +55,7 @@ public class WeaponSwitcher : MonoBehaviour
                 currentWeapon++;
             }
         }
-        
+
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
             if (currentWeapon <= 0)
