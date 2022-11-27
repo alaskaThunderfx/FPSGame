@@ -9,6 +9,9 @@ public class WeaponZoom : MonoBehaviour
     Camera mainCamera;
 
     [SerializeField]
+    RigidbodyFirstPersonController mainController;
+
+    [SerializeField]
     float amountToZoom = 10f;
 
     [SerializeField]
@@ -17,11 +20,9 @@ public class WeaponZoom : MonoBehaviour
     float originalZoom;
     float originalXSensitivity;
     float originalYSensitivity;
-    RigidbodyFirstPersonController mainController;
 
     void Start()
     {
-        mainController = GetComponent<RigidbodyFirstPersonController>();
         originalZoom = mainCamera.fieldOfView;
         originalXSensitivity = mainController.mouseLook.XSensitivity;
         originalYSensitivity = mainController.mouseLook.YSensitivity;

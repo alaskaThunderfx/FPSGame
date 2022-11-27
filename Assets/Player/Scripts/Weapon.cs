@@ -23,22 +23,30 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     Ammo ammoSlot;
 
+    [SerializeField]
+    float timeBetweenShots = .5f;
+
+    bool canShoot = true;
+
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0) && canShoot)
         {
-            Shoot();
+            StartCoroutine(Shoot());
         }
     }
 
-    void Shoot()
+    IEnumerator Shoot()
     {
+        canShoot = false;
         if (ammoSlot.CurrentAmmo > 0)
         {
             ammoSlot.CurrentAmmo -= 1;
             PlayMuzzleFlash();
             ProcessRaycast();
         }
+        yield return new WaitForSeconds(timeBetweenShots);
+        canShoot = true;
     }
 
     void PlayMuzzleFlash()

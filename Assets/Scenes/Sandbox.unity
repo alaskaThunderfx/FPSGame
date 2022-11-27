@@ -8324,6 +8324,11 @@ PrefabInstance:
       propertyPath: advancedSettings.airControl
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8196185063161778109, guid: b5e12f910536fde4ca397c8a982f611a,
+        type: 3}
+      propertyPath: advancedSettings.slowDownRate
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 8196185063171471967, guid: b5e12f910536fde4ca397c8a982f611a,
         type: 3}
       propertyPath: m_Icon
